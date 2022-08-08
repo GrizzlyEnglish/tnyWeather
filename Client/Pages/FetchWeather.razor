@@ -1,0 +1,68 @@
+﻿@page "/"
+
+<PageTitle>Fetch Weather</PageTitle>
+
+<div class="columns">
+    <div class="column">
+        <div class="field">
+            <label class="label">City Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="City Name" @bind-value="CityName">
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="field">
+            <label class="label">Zip Code</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="City Name" @bind-value="ZipCode">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="columns">
+    <div class="column has-text-centered">
+        <label class="h1">--- OR ---</label>
+    </div>
+</div>
+
+<div class="columns">
+    <div class="column">
+        <div class="field">
+            <label class="label">Latitude</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Latitude" @bind-value="Lon">
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="field">
+            <label class="label">Longitude</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Longitude" @bind-value="Lat">
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (ShowError)
+{
+<div class="columns">
+    <div class="column">
+        <h1 class="has-text-danger">You must specifiy city name, zip code, or coordinates in order to get weather information</h1>
+    </div>
+</div>
+}
+
+<div class="columns">
+    <div class="column">
+        <button class="button is-danger">Clear</button>
+        <button class="button is-primary" @onclick="Fetch">Fetch Weather</button>
+    </div>
+</div>
+
+@if (Weather != null)
+{
+<WeatherResults Weather="Weather"/>
+}

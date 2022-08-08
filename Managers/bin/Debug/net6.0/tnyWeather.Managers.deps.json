@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "tnyWeather.Managers/1.0.0": {
+        "dependencies": {
+          "tnyWeather.Shared": "1.0.0"
+        },
+        "runtime": {
+          "tnyWeather.Managers.dll": {}
+        }
+      },
+      "tnyWeather.Shared/1.0.0": {
+        "runtime": {
+          "tnyWeather.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "tnyWeather.Managers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "tnyWeather.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

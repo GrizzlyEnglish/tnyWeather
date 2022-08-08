@@ -1,0 +1,13 @@
+﻿@namespace tnyWeather.Client.Shared
+
+<div class="columns">
+    @{
+        var currentWeather = Weather.Weather.First();
+    }
+    <div class="column">
+        <h1 class="h1 has-text-centered">
+            <img src="@GetIcon()" />
+            @currentWeather.Main
+        </h1>
+    </div>
+</div>
