@@ -18,7 +18,8 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "OPEN_WEATHER_API_KEY": ""
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"

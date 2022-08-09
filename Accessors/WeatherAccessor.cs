@@ -1,7 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using System.Net.Http;
-using System.Net.Http.Json;
+﻿using System.Net.Http.Json;
 using tnyWeather.Shared;
 using tnyWeather.Shared.Contracts;
 
@@ -15,7 +12,7 @@ public class WeatherAccessor : IWeatherAccessor
     public WeatherAccessor(IHttpClientFactory httpClientFactory)
     {
         _httpClient = httpClientFactory.CreateClient("OpenWeatherClient");
-        _apiKey = Environment.GetEnvironmentVariable("OPENWEATHER_API_KEY");
+        _apiKey = Environment.GetEnvironmentVariable("OPEN_WEATHER_API_KEY");
         if (_apiKey == null)
         {
             throw new Exception("Mising api key for open weather");
