@@ -7,6 +7,7 @@ Built in Blazor WASM/dotnet web API and nUnit for testing
 # How to run
 
 - Install dotnet 6 SDK
-- Add API key to Server/Properties/launchSettings.json
+- Add API key to Server/Properties/launchSettings.json or .vscode/launch.json for debugging
+- Build the application `dotnet build`
 - Run the application via `dotnet run --project .\Server\tnyWeather.Server.csproj`
 - If you have VSCode installed you can use F5 to run debugger; or you can install Visual Studio to get the full suite of controls

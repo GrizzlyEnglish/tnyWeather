@@ -4,10 +4,36 @@
     @{
         var currentWeather = Weather.Weather.First();
     }
-    <div class="column">
-        <h1 class="h1 has-text-centered">
+    <div class="column is-12 has-text-centered">
+        <label class="is-size-2">
+            @Weather.Name Current Weather
+        </label>
+    </div>
+</div>
+
+<div class="columns">
+    <div class="column is-12 has-text-centered">
+        <label class="is-size-3">
             <img src="@GetIcon()" />
             @currentWeather.Main
-        </h1>
+        </label>
+    </div>
+</div>
+
+<div class="columns">
+    <div class="column has-text-centered">
+        <label class="is-size-4">
+            Temp: <strong>@Weather.Main.Temp</strong>
+        </label>
+    </div>
+    <div class="column has-text-centered">
+        <label class="is-size-4">
+            Feels Like: <strong>@Weather.Main.Feels_Like</strong>
+        </label>
+    </div>
+    <div class="column has-text-centered">
+        <label class="is-size-4">
+            Wind: <strong>@Weather.Wind.Speed</strong>
+        </label>
     </div>
 </div>
