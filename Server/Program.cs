@@ -18,6 +18,12 @@ builder.Services.AddScoped<IWeatherManager, WeatherManager>();
 builder.Services.AddScoped<IWeatherAccessor, WeatherAccessor>();
 builder.Services.AddSingleton<IWeatherEngine, WeatherEngine>();
 
+    string port = Environment.GetEnvironmentVariable("PORT");
+
+if (port != null)
+{
+    builder.WebHost.UseUrls("http://*:" + port);
+}
 
 var app = builder.Build();
 
